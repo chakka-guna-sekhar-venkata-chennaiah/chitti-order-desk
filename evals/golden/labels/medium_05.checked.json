@@ -1,0 +1,198 @@
+{
+  "chit_id": "medium_05",
+  "difficulty": "medium",
+  "header": {
+    "shop_name_raw": "not readable Telugu",
+    "shop_name_script": "telugu",
+    "date_raw": "25/10/26",
+    "date_iso": "2026-10-25"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "1.5 red - 2 coil (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "red"
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 black - 2 coil",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "black"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 green - 1 coil",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A switch - 20 (GM)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "GM",
+        "brand_raw": "GM"
+      },
+      "quantity": 20,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A socket - 10",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "LED panel - 6 (Wipro)",
+      "mark": "none",
+      "item": {
+        "category": "led_panel",
+        "spec": {},
+        "brand": "Wipro",
+        "brand_raw": "Wipro"
+      },
+      "quantity": 6,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "MCB .. - 2 (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {},
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 2,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "PVC tape - 10 (3M)",
+      "mark": "none",
+      "item": {
+        "category": "pvc_tape",
+        "spec": {},
+        "brand": "3M",
+        "brand_raw": "3M"
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "Exhaust fan - 2 (Crompton)",
+      "mark": "none",
+      "item": {
+        "category": "exhaust_fan",
+        "spec": {},
+        "brand": "Crompton",
+        "brand_raw": "Crompton"
+      },
+      "quantity": 2,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "Modular box - 5 (Legrand)",
+      "mark": "none",
+      "item": {
+        "category": "modular_box",
+        "spec": {},
+        "brand": "Legrand",
+        "brand_raw": "Legrand"
+      },
+      "quantity": 5,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from medium_05.png. Check every line against the image, fix it, then save as medium_05.checked.json."
+}

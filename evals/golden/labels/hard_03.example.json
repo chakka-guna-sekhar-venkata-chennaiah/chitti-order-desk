@@ -1,0 +1,240 @@
+{
+  "chit_id": "hard_03",
+  "difficulty": "hard",
+  "header": {
+    "shop_name_raw": null,
+    "shop_name_script": "none",
+    "date_raw": "25/10/26",
+    "date_iso": "2026-10-25"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "1.5 R - 2c",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "red"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 B - 2c",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "black"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 G - 1c",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A sw - 20 A",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "A"
+      },
+      "quantity": 20,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A sc - 10",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "5",
+      "raw_text": "16A sw - 5 GM",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "GM",
+        "brand_raw": "GM"
+      },
+      "quantity": 5,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "9w LED - 12 H",
+      "mark": "none",
+      "item": {
+        "category": "led_bulb",
+        "spec": {
+          "watt": 9
+        },
+        "brand": "Havells",
+        "brand_raw": "H"
+      },
+      "quantity": 12,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "tape . - 3",
+      "mark": "none",
+      "item": {
+        "category": "pvc_tape",
+        "spec": {},
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 3,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "10",
+      "raw_text": ".tape . - 10 3M",
+      "mark": "none",
+      "item": {
+        "category": "pvc_tape",
+        "spec": {},
+        "brand": "3M",
+        "brand_raw": "3M"
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": "Tape is also on the line above; the same item is on two lines."
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "13",
+      "raw_text": "pipe 20 - 10 Sup",
+      "mark": "none",
+      "item": {
+        "category": "pvc_pipe",
+        "spec": {
+          "size_mm": 20
+        },
+        "brand": "Supreme",
+        "brand_raw": "Sup"
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 11,
+      "line_no_written": "10",
+      "raw_text": "bend . - 20",
+      "mark": "none",
+      "item": {
+        "category": "pvc_bend",
+        "spec": {},
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 20,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 12,
+      "line_no_written": "12",
+      "raw_text": "clp . - 20",
+      "mark": "none",
+      "item": {
+        "category": "pvc_clamp",
+        "spec": {},
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 20,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "clarify",
+  "clarify_line_indexes": [
+    9
+  ],
+  "_note": "DRAFT by Claude from hard_03.png. Check every line against the image, fix it, then save as hard_03.checked.json."
+}

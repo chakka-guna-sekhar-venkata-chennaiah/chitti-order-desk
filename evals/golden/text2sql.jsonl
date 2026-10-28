@@ -1,0 +1,12 @@
+{"id": "waiting-approval", "question": "How many orders are waiting for my approval?", "reference_sql": "SELECT COUNT(*) FROM v_orders WHERE state = 'AWAITING_OWNER'"}
+{"id": "overdue-dealers", "question": "Which dealers have overdue bills?", "reference_sql": "SELECT dealer_name FROM v_dealer_credit WHERE overdue_bills > 0"}
+{"id": "total-outstanding", "question": "What is the total money that dealers owe us?", "reference_sql": "SELECT SUM(outstanding_rupees) FROM v_dealer_credit"}
+{"id": "low-stock", "question": "Which products are low on stock? Give the SKUs.", "reference_sql": "SELECT sku FROM v_stock WHERE is_low = 1"}
+{"id": "sellable-switch", "question": "How many Anchor 6A switches can I still sell?", "reference_sql": "SELECT sellable FROM v_stock WHERE sku = 'SW-6A-ANCHOR'"}
+{"id": "packing-now", "question": "Which order numbers are being packed now?", "reference_sql": "SELECT order_id FROM v_orders WHERE state = 'PACKING'"}
+{"id": "mcb-sold", "question": "How many MCBs did we sell in approved orders?", "reference_sql": "SELECT SUM(qty) FROM v_order_lines WHERE category = 'mcb' AND order_state IN ('APPROVED','PACKING','PACKED','DISPATCHED')"}
+{"id": "top-debtor", "question": "Which dealer owes us the most money?", "reference_sql": "SELECT dealer_name FROM v_dealer_credit ORDER BY outstanding_rupees DESC LIMIT 1"}
+{"id": "finolex-coils", "question": "How many Finolex wire coils do we have on hand in total?", "reference_sql": "SELECT SUM(on_hand) FROM v_stock WHERE category = 'wire' AND brand = 'Finolex'"}
+{"id": "orders-by-state", "question": "How many orders are in each state?", "reference_sql": "SELECT state, COUNT(*) FROM v_orders GROUP BY state"}
+{"id": "fan-brands", "question": "Which ceiling fan brands can we sell now?", "reference_sql": "SELECT brand FROM v_stock WHERE category = 'ceiling_fan' AND sellable > 0"}
+{"id": "sales-value", "question": "What is the total value of all approved bills, in rupees?", "reference_sql": "SELECT SUM(amount_rupees) FROM v_sales_daily"}

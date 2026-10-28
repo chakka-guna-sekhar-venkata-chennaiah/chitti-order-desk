@@ -1,0 +1,208 @@
+{
+  "chit_id": "easy_01",
+  "difficulty": "easy",
+  "header": {
+    "shop_name_raw": "Sri Sai Electricals",
+    "shop_name_script": "latin",
+    "date_raw": "25/10/26",
+    "date_iso": "2026-10-25"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "1.5 sq mm wire (Red) - 2 coil (Finolex)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "red"
+        },
+        "brand": "Finolex",
+        "brand_raw": "Finolex"
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 sq mm wire (Black) - 2 coil (Finolex)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "black"
+        },
+        "brand": "Finolex",
+        "brand_raw": "Finolex"
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 sq mm wire (Green) - 1 coil (Polycab)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": "Polycab",
+        "brand_raw": "Polycab"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A switch (Anchor) - 20 Nos",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 20,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A socket (Anchor) - 10 Nos",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A switch (GM) - 5 Nos",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "GM",
+        "brand_raw": "GM"
+      },
+      "quantity": 5,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "LED bulb 9W (Havells) - 12 Nos",
+      "mark": "none",
+      "item": {
+        "category": "led_bulb",
+        "spec": {
+          "watt": 9
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 12,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "Ceiling fan 1200mm (Crompton) - 3 Nos",
+      "mark": "none",
+      "item": {
+        "category": "ceiling_fan",
+        "spec": {
+          "size_mm": 1200
+        },
+        "brand": "Crompton",
+        "brand_raw": "Crompton"
+      },
+      "quantity": 3,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "MCB 32A (Schneider) - 2 Nos",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 32
+        },
+        "brand": "Schneider",
+        "brand_raw": "Schneider"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "Modular box 3M (Legrand) - 5 Nos",
+      "mark": "none",
+      "item": {
+        "category": "modular_box",
+        "spec": {
+          "modules": 3
+        },
+        "brand": "Legrand",
+        "brand_raw": "Legrand"
+      },
+      "quantity": 5,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "Example label written by Claude from the image. Check it against easy_01.png, then save it as easy_01.checked.json."
+}

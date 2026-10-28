@@ -1,0 +1,204 @@
+{
+  "chit_id": "easy_02",
+  "difficulty": "easy",
+  "header": {
+    "shop_name_raw": "Ramesh Electrical Works",
+    "shop_name_script": "latin",
+    "date_raw": "24/10/26",
+    "date_iso": "2026-10-24"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "4 sq mm wire (Red) - 1 coil (Polycab)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 4,
+          "color": "red"
+        },
+        "brand": "Polycab",
+        "brand_raw": "Polycab"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "4 sq mm wire (Black) - 1 coil (Polycab)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 4,
+          "color": "black"
+        },
+        "brand": "Polycab",
+        "brand_raw": "Polycab"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 sq mm wire (Green) - 1 coil (Finolex)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": "Finolex",
+        "brand_raw": "Finolex"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A switch (Havells) - 15 Nos",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 15,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A socket (Havells) - 10 Nos",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A switch (Anchor) - 3 Nos",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 3,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "16A socket (Anchor) - 3 Nos",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 3,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "LED panel light 18W (Philips) - 6 Nos",
+      "mark": "none",
+      "item": {
+        "category": "led_panel",
+        "spec": {
+          "watt": 18
+        },
+        "brand": "Philips",
+        "brand_raw": "Philips"
+      },
+      "quantity": 6,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "Exhaust fan (Crompton) - 2 Nos",
+      "mark": "none",
+      "item": {
+        "category": "exhaust_fan",
+        "spec": {},
+        "brand": "Crompton",
+        "brand_raw": "Crompton"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "PVC tape (3M) - 10 Nos",
+      "mark": "none",
+      "item": {
+        "category": "pvc_tape",
+        "spec": {},
+        "brand": "3M",
+        "brand_raw": "3M"
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from easy_02.png. Check every line against the image, fix it, then save as easy_02.checked.json."
+}

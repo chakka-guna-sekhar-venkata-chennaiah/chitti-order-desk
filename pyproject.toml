@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chitti-order-desk"
+version = "0.1.0"
+description = "A Telegram order desk for electrical dealers: handwritten chitti in, approved order and packing slip out."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=2.3,<3",          # MCP server (MCPServer, streamable HTTP)
+  "openai>=1.40",         # OpenAI-compatible client for Nebius Token Factory
+  "httpx>=0.27",          # Telegram Bot API calls
+  "uvicorn>=0.30",        # ASGI server for the MCP app
+  "starlette>=0.37",
+  "reportlab>=4.0",       # catalog PDF
+  "matplotlib>=3.8",      # charts for the owner
+  "pillow>=10.0",         # image checks and resizing
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+order-desk = "order_desk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"order_desk.db" = ["schema.sql", "seed_data/*.csv"]
+"order_desk.agent" = ["instructions/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

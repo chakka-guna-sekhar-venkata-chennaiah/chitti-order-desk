@@ -1,0 +1,208 @@
+{
+  "chit_id": "medium_02",
+  "difficulty": "medium",
+  "header": {
+    "shop_name_raw": "Suresh Electricals VJA",
+    "shop_name_script": "latin",
+    "date_raw": "24/10/26",
+    "date_iso": "2026-10-24"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "4 sq wire red - 1 coil (Polycab)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 4,
+          "color": "red"
+        },
+        "brand": "Polycab",
+        "brand_raw": "Polycab"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "4 sq wire black - 1 coil",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 4,
+          "color": "black"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 sq wire green - 1 coil (Finolex)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": "Finolex",
+        "brand_raw": "Finolex"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A switch - 15 (GM)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "GM",
+        "brand_raw": "GM"
+      },
+      "quantity": 15,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A socket - 10",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A switch - 3 (Anchor)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 3,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "LED panel 18W - 6 (Philips)",
+      "mark": "none",
+      "item": {
+        "category": "led_panel",
+        "spec": {
+          "watt": 18
+        },
+        "brand": "Philips",
+        "brand_raw": "Philips"
+      },
+      "quantity": 6,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "Battens 20W - 6 (Wipro)",
+      "mark": "none",
+      "item": {
+        "category": "batten",
+        "spec": {
+          "watt": 20
+        },
+        "brand": "Wipro",
+        "brand_raw": "Wipro"
+      },
+      "quantity": 6,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "MCB 16A - 4 (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 4,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "Dist box 4way - 1 (Schneider)",
+      "mark": "none",
+      "item": {
+        "category": "distribution_box",
+        "spec": {
+          "ways": 4
+        },
+        "brand": "Schneider",
+        "brand_raw": "Schneider"
+      },
+      "quantity": 1,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from medium_02.png. Check every line against the image, fix it, then save as medium_02.checked.json."
+}

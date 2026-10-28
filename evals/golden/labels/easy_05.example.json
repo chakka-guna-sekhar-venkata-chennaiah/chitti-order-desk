@@ -1,0 +1,202 @@
+{
+  "chit_id": "easy_05",
+  "difficulty": "easy",
+  "header": {
+    "shop_name_raw": "Shop Renovation",
+    "shop_name_script": "latin",
+    "date_raw": "25/10/26",
+    "date_iso": "2026-10-25"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "1.5 wire red - 1 coil (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "red"
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 wire black - 1 coil (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "black"
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 wire green - 1 coil (Polycab)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": "Polycab",
+        "brand_raw": "Polycab"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A switch - 25 Nos (Legrand)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Legrand",
+        "brand_raw": "Legrand"
+      },
+      "quantity": 25,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A socket - 15 Nos (Legrand)",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Legrand",
+        "brand_raw": "Legrand"
+      },
+      "quantity": 15,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "LED downlight 12W - 10 Nos (Wipro)",
+      "mark": "none",
+      "item": {
+        "category": "led_downlight",
+        "spec": {
+          "watt": 12
+        },
+        "brand": "Wipro",
+        "brand_raw": "Wipro"
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "Track light - 5 Nos (Philips)",
+      "mark": "none",
+      "item": {
+        "category": "track_light",
+        "spec": {},
+        "brand": "Philips",
+        "brand_raw": "Philips"
+      },
+      "quantity": 5,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "Ceiling fan - 2 Nos (Crompton)",
+      "mark": "none",
+      "item": {
+        "category": "ceiling_fan",
+        "spec": {},
+        "brand": "Crompton",
+        "brand_raw": "Crompton"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "Exhaust fan - 2 Nos (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "exhaust_fan",
+        "spec": {},
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "MCB 32A - 2 Nos (L&T)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 32
+        },
+        "brand": "L&T",
+        "brand_raw": "L&T"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from easy_05.png. Check every line against the image, fix it, then save as easy_05.checked.json."
+}

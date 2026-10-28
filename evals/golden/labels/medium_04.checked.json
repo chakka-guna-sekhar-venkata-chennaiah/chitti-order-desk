@@ -1,0 +1,201 @@
+{
+  "chit_id": "medium_04",
+  "difficulty": "medium",
+  "header": {
+    "shop_name_raw": "Site",
+    "shop_name_script": "latin",
+    "date_raw": "24/10/26",
+    "date_iso": "2026-10-24"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "2.5 wire - 2 coil (Polycab)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5
+        },
+        "brand": "Polycab",
+        "brand_raw": "Polycab"
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 wire - 2 coil",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "6A sw - 30 (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 30,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A sock - 20",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 20,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "16A sw - 5 (Anchor)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 5,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A sock - 5",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 5,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "MCB 32A - 2 (L&T)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 32
+        },
+        "brand": "L&T",
+        "brand_raw": "L&T"
+      },
+      "quantity": 2,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "DB box - 1 (Schneider)",
+      "mark": "none",
+      "item": {
+        "category": "distribution_box",
+        "spec": {},
+        "brand": "Schneider",
+        "brand_raw": "Schneider"
+      },
+      "quantity": 1,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "LED tube 20W - 10 (Philips)",
+      "mark": "none",
+      "item": {
+        "category": "led_tube",
+        "spec": {
+          "watt": 20
+        },
+        "brand": "Philips",
+        "brand_raw": "Philips"
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "Fan - 3 (Orient)",
+      "mark": "none",
+      "item": {
+        "category": "ceiling_fan",
+        "spec": {},
+        "brand": "Orient",
+        "brand_raw": "Orient"
+      },
+      "quantity": 3,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from medium_04.png. Check every line against the image, fix it, then save as medium_04.checked.json."
+}

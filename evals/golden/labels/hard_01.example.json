@@ -1,0 +1,208 @@
+{
+  "chit_id": "hard_01",
+  "difficulty": "hard",
+  "header": {
+    "shop_name_raw": null,
+    "shop_name_script": "none",
+    "date_raw": "25/10",
+    "date_iso": "2026-10-25"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "1.5 r - 2c (Fin)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "red"
+        },
+        "brand": "Finolex",
+        "brand_raw": "Fin"
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 b - 2c",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "black"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 g - 1c",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A sw - 20 (Anch)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anch"
+      },
+      "quantity": 20,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A sc - 10",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A sw - 5",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 5,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "LED 9w - 12 (Hv)",
+      "mark": "none",
+      "item": {
+        "category": "led_bulb",
+        "spec": {
+          "watt": 9
+        },
+        "brand": "Havells",
+        "brand_raw": "Hv"
+      },
+      "quantity": 12,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "fan 1200 - 3 (Cr)",
+      "mark": "none",
+      "item": {
+        "category": "ceiling_fan",
+        "spec": {
+          "size_mm": 1200
+        },
+        "brand": "Crompton",
+        "brand_raw": "Cr"
+      },
+      "quantity": 3,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "MCB 32 - 2 (Sch)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 32
+        },
+        "brand": "Schneider",
+        "brand_raw": "Sch"
+      },
+      "quantity": 2,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "Box 3M - 5",
+      "mark": "none",
+      "item": {
+        "category": "modular_box",
+        "spec": {},
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 5,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": "'3M' can mean a 3-module box or the brand 3M."
+    }
+  ],
+  "expected_action": "clarify",
+  "clarify_line_indexes": [
+    10
+  ],
+  "_note": "DRAFT by Claude from hard_01.png. Check every line against the image, fix it, then save as hard_01.checked.json."
+}

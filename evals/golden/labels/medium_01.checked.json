@@ -1,0 +1,206 @@
+{
+  "chit_id": "medium_01",
+  "difficulty": "medium",
+  "header": {
+    "shop_name_raw": "not readable Telugu",
+    "shop_name_script": "telugu",
+    "date_raw": "25/10/26",
+    "date_iso": "2026-10-25"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "1.5 sq wire red - 2 coil (Finolex)",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "red"
+        },
+        "brand": "Finolex",
+        "brand_raw": "Finolex"
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "1.5 sq wire black - 2 coil",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 1.5,
+          "color": "black"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 2,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 sq wire green - 1 coil",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A switch - 20nos (Anchor)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 20,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A socket - 10 nos",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A switch - 5 nos",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 5,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "9w LED bulb - 12 nos (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "led_bulb",
+        "spec": {
+          "watt": 9
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 12,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "Fan 1200mm - 3 nos (Orient)",
+      "mark": "none",
+      "item": {
+        "category": "ceiling_fan",
+        "spec": {
+          "size_mm": 1200
+        },
+        "brand": "Orient",
+        "brand_raw": "Orient"
+      },
+      "quantity": 3,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "MCB 32A - 2 nos (Schneider)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 32
+        },
+        "brand": "Schneider",
+        "brand_raw": "Schneider"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "PVC tape - 10 nos (3M)",
+      "mark": "none",
+      "item": {
+        "category": "pvc_tape",
+        "spec": {},
+        "brand": "3M",
+        "brand_raw": "3M"
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from medium_01.png. Check every line against the image, fix it, then save as medium_01.checked.json."
+}

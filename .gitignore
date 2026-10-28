@@ -1,0 +1,28 @@
+# secrets
+.env
+local.env
+
+# runtime data (database, uploads, generated PDFs, traces)
+data/
+
+# eval runs (keep only the scorecard)
+evals/results/*
+!evals/results/SCORECARD.md
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+build/
+dist/
+
+# os / editors
+.DS_Store
+.idea/
+.vscode/
+
+# local working notes
+_handoff/
+.claude/

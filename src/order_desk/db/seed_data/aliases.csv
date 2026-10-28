@@ -1,0 +1,185 @@
+alias,sku
+1.5 sq mm wire red finolex,WIRE-1.5-RED-FINOLEX
+1.5 sq wire red,WIRE-1.5-RED-FINOLEX
+1.5 r fin,WIRE-1.5-RED-FINOLEX
+1.5 sq mm wire red polycab,WIRE-1.5-RED-POLYCAB
+1.5 sq wire red,WIRE-1.5-RED-POLYCAB
+1.5 r pol,WIRE-1.5-RED-POLYCAB
+1.5 sq mm wire red havells,WIRE-1.5-RED-HAVELLS
+1.5 sq wire red,WIRE-1.5-RED-HAVELLS
+1.5 r hav,WIRE-1.5-RED-HAVELLS
+1.5 sq mm wire black finolex,WIRE-1.5-BLACK-FINOLEX
+1.5 sq wire black,WIRE-1.5-BLACK-FINOLEX
+1.5 b fin,WIRE-1.5-BLACK-FINOLEX
+1.5 sq mm wire black polycab,WIRE-1.5-BLACK-POLYCAB
+1.5 sq wire black,WIRE-1.5-BLACK-POLYCAB
+1.5 b pol,WIRE-1.5-BLACK-POLYCAB
+1.5 sq mm wire black havells,WIRE-1.5-BLACK-HAVELLS
+1.5 sq wire black,WIRE-1.5-BLACK-HAVELLS
+1.5 b hav,WIRE-1.5-BLACK-HAVELLS
+1.5 sq mm wire green finolex,WIRE-1.5-GREEN-FINOLEX
+1.5 sq wire green,WIRE-1.5-GREEN-FINOLEX
+1.5 g fin,WIRE-1.5-GREEN-FINOLEX
+1.5 sq mm wire green polycab,WIRE-1.5-GREEN-POLYCAB
+1.5 sq wire green,WIRE-1.5-GREEN-POLYCAB
+1.5 g pol,WIRE-1.5-GREEN-POLYCAB
+1.5 sq mm wire green havells,WIRE-1.5-GREEN-HAVELLS
+1.5 sq wire green,WIRE-1.5-GREEN-HAVELLS
+1.5 g hav,WIRE-1.5-GREEN-HAVELLS
+2.5 sq mm wire red finolex,WIRE-2.5-RED-FINOLEX
+2.5 sq wire red,WIRE-2.5-RED-FINOLEX
+2.5 r fin,WIRE-2.5-RED-FINOLEX
+2.5 sq mm wire red polycab,WIRE-2.5-RED-POLYCAB
+2.5 sq wire red,WIRE-2.5-RED-POLYCAB
+2.5 r pol,WIRE-2.5-RED-POLYCAB
+2.5 sq mm wire red havells,WIRE-2.5-RED-HAVELLS
+2.5 sq wire red,WIRE-2.5-RED-HAVELLS
+2.5 r hav,WIRE-2.5-RED-HAVELLS
+2.5 sq mm wire black finolex,WIRE-2.5-BLACK-FINOLEX
+2.5 sq wire black,WIRE-2.5-BLACK-FINOLEX
+2.5 b fin,WIRE-2.5-BLACK-FINOLEX
+2.5 sq mm wire black polycab,WIRE-2.5-BLACK-POLYCAB
+2.5 sq wire black,WIRE-2.5-BLACK-POLYCAB
+2.5 b pol,WIRE-2.5-BLACK-POLYCAB
+2.5 sq mm wire black havells,WIRE-2.5-BLACK-HAVELLS
+2.5 sq wire black,WIRE-2.5-BLACK-HAVELLS
+2.5 b hav,WIRE-2.5-BLACK-HAVELLS
+2.5 sq mm wire green finolex,WIRE-2.5-GREEN-FINOLEX
+2.5 sq wire green,WIRE-2.5-GREEN-FINOLEX
+2.5 g fin,WIRE-2.5-GREEN-FINOLEX
+2.5 sq mm wire green polycab,WIRE-2.5-GREEN-POLYCAB
+2.5 sq wire green,WIRE-2.5-GREEN-POLYCAB
+2.5 g pol,WIRE-2.5-GREEN-POLYCAB
+2.5 sq mm wire green havells,WIRE-2.5-GREEN-HAVELLS
+2.5 sq wire green,WIRE-2.5-GREEN-HAVELLS
+2.5 g hav,WIRE-2.5-GREEN-HAVELLS
+4 sq mm wire red finolex,WIRE-4-RED-FINOLEX
+4 sq wire red,WIRE-4-RED-FINOLEX
+4 r fin,WIRE-4-RED-FINOLEX
+4 sq mm wire red polycab,WIRE-4-RED-POLYCAB
+4 sq wire red,WIRE-4-RED-POLYCAB
+4 r pol,WIRE-4-RED-POLYCAB
+4 sq mm wire red havells,WIRE-4-RED-HAVELLS
+4 sq wire red,WIRE-4-RED-HAVELLS
+4 r hav,WIRE-4-RED-HAVELLS
+4 sq mm wire black finolex,WIRE-4-BLACK-FINOLEX
+4 sq wire black,WIRE-4-BLACK-FINOLEX
+4 b fin,WIRE-4-BLACK-FINOLEX
+4 sq mm wire black polycab,WIRE-4-BLACK-POLYCAB
+4 sq wire black,WIRE-4-BLACK-POLYCAB
+4 b pol,WIRE-4-BLACK-POLYCAB
+4 sq mm wire black havells,WIRE-4-BLACK-HAVELLS
+4 sq wire black,WIRE-4-BLACK-HAVELLS
+4 b hav,WIRE-4-BLACK-HAVELLS
+4 sq mm wire green finolex,WIRE-4-GREEN-FINOLEX
+4 sq wire green,WIRE-4-GREEN-FINOLEX
+4 g fin,WIRE-4-GREEN-FINOLEX
+4 sq mm wire green polycab,WIRE-4-GREEN-POLYCAB
+4 sq wire green,WIRE-4-GREEN-POLYCAB
+4 g pol,WIRE-4-GREEN-POLYCAB
+4 sq mm wire green havells,WIRE-4-GREEN-HAVELLS
+4 sq wire green,WIRE-4-GREEN-HAVELLS
+4 g hav,WIRE-4-GREEN-HAVELLS
+6a switch anchor,SW-6A-ANCHOR
+6a sw,SW-6A-ANCHOR
+6a socket anchor,SOC-6A-ANCHOR
+6a sock,SOC-6A-ANCHOR
+6a sc,SOC-6A-ANCHOR
+6a switch gm,SW-6A-GM
+6a sw,SW-6A-GM
+6a socket gm,SOC-6A-GM
+6a sock,SOC-6A-GM
+6a sc,SOC-6A-GM
+6a switch havells,SW-6A-HAVELLS
+6a sw,SW-6A-HAVELLS
+6a socket havells,SOC-6A-HAVELLS
+6a sock,SOC-6A-HAVELLS
+6a sc,SOC-6A-HAVELLS
+6a switch legrand,SW-6A-LEGRAND
+6a sw,SW-6A-LEGRAND
+6a socket legrand,SOC-6A-LEGRAND
+6a sock,SOC-6A-LEGRAND
+6a sc,SOC-6A-LEGRAND
+16a switch anchor,SW-16A-ANCHOR
+16a sw,SW-16A-ANCHOR
+16a socket anchor,SOC-16A-ANCHOR
+16a sock,SOC-16A-ANCHOR
+16a sc,SOC-16A-ANCHOR
+16a switch gm,SW-16A-GM
+16a sw,SW-16A-GM
+16a socket gm,SOC-16A-GM
+16a sock,SOC-16A-GM
+16a sc,SOC-16A-GM
+16a switch havells,SW-16A-HAVELLS
+16a sw,SW-16A-HAVELLS
+16a socket havells,SOC-16A-HAVELLS
+16a sock,SOC-16A-HAVELLS
+16a sc,SOC-16A-HAVELLS
+16a switch legrand,SW-16A-LEGRAND
+16a sw,SW-16A-LEGRAND
+16a socket legrand,SOC-16A-LEGRAND
+16a sock,SOC-16A-LEGRAND
+16a sc,SOC-16A-LEGRAND
+mcb 16a schneider,MCB-16A-SCHNEIDER
+mcb 16,MCB-16A-SCHNEIDER
+mcb 16a havells,MCB-16A-HAVELLS
+mcb 16,MCB-16A-HAVELLS
+mcb 16a l&t,MCB-16A-LT
+mcb 16,MCB-16A-LT
+mcb 32a schneider,MCB-32A-SCHNEIDER
+mcb 32,MCB-32A-SCHNEIDER
+mcb 32a havells,MCB-32A-HAVELLS
+mcb 32,MCB-32A-HAVELLS
+mcb 32a l&t,MCB-32A-LT
+mcb 32,MCB-32A-LT
+9w led bulb,BULB-9W-SYSKA
+led 9w,BULB-9W-SYSKA
+9w led bulb,BULB-9W-HAVELLS
+led 9w,BULB-9W-HAVELLS
+9w led bulb,BULB-9W-PHILIPS
+led 9w,BULB-9W-PHILIPS
+9w led bulb,BULB-9W-WIPRO
+led 9w,BULB-9W-WIPRO
+led panel 18w,PANEL-18W-PHILIPS
+18w panel,PANEL-18W-PHILIPS
+led panel 18w,PANEL-18W-WIPRO
+18w panel,PANEL-18W-WIPRO
+led tube 20w,TUBE-20W-PHILIPS
+20w tube,TUBE-20W-PHILIPS
+led tube 20w,TUBE-20W-SYSKA
+20w tube,TUBE-20W-SYSKA
+led downlight 12w,DOWN-12W-WIPRO
+track light,TRACK-PHILIPS
+batten 20w,BATTEN-20W-WIPRO
+battens,BATTEN-20W-WIPRO
+batten 20w,BATTEN-20W-PHILIPS
+battens,BATTEN-20W-PHILIPS
+ceiling fan 1200mm,FAN-1200-CROMPTON
+fan 1200,FAN-1200-CROMPTON
+ceiling fan 1200mm,FAN-1200-ORIENT
+fan 1200,FAN-1200-ORIENT
+ceiling fan 1200mm,FAN-1200-HAVELLS
+fan 1200,FAN-1200-HAVELLS
+exhaust fan,EXH-CROMPTON
+exhaust fan,EXH-HAVELLS
+pvc pipe 20mm,PIPE-20-SUPREME
+pipe 20,PIPE-20-SUPREME
+20mm bend,BEND-20-SUPREME
+bend,BEND-20-SUPREME
+20mm clamp,CLAMP-20-HAVELLS
+clamp,CLAMP-20-HAVELLS
+clp,CLAMP-20-HAVELLS
+pvc tape,TAPE-3M
+tape,TAPE-3M
+modular box 3m,BOX-3M-LEGRAND
+box 3m,BOX-3M-LEGRAND
+modular box 3m,BOX-3M-ANCHOR
+box 3m,BOX-3M-ANCHOR
+db 4 way,DB-4W-SCHNEIDER
+dist box 4way,DB-4W-SCHNEIDER
+distribution box 4 way,DB-4W-SCHNEIDER
+db 4 way,DB-4W-HAVELLS
+dist box 4way,DB-4W-HAVELLS
+distribution box 4 way,DB-4W-HAVELLS
+cat6 cable,CAT6-DLINK
+rj45 connector,RJ45-AMP

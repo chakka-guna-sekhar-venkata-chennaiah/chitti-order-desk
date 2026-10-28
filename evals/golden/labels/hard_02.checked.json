@@ -1,0 +1,209 @@
+{
+  "chit_id": "hard_02",
+  "difficulty": "hard",
+  "header": {
+    "shop_name_raw": null,
+    "shop_name_script": "none",
+    "date_raw": "24/10",
+    "date_iso": "2026-10-24"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "4 sq r - 1c Poly",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 4,
+          "color": "red"
+        },
+        "brand": "Polycab",
+        "brand_raw": "Poly"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "4 sq b - 1c",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 4,
+          "color": "black"
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "2.5 g - 1c fin",
+      "mark": "none",
+      "item": {
+        "category": "wire",
+        "spec": {
+          "size_sqmm": 2.5,
+          "color": "green"
+        },
+        "brand": "Finolex",
+        "brand_raw": "fin"
+      },
+      "quantity": 1,
+      "unit": "coil",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "6A sw - 15 GM",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "GM",
+        "brand_raw": "GM"
+      },
+      "quantity": 15,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "6A sc - 10",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": null,
+        "brand_raw": null
+      },
+      "quantity": 10,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "16A ' - 3 Anch",
+      "mark": "none",
+      "item": {
+        "category": null,
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anch"
+      },
+      "quantity": 3,
+      "unit": null,
+      "uses_ditto": true,
+      "legibility": "clear",
+      "ambiguity": "Ditto mark: it can mean switch or socket."
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "LED 18w - 6 phil",
+      "mark": "none",
+      "item": {
+        "category": null,
+        "spec": {
+          "watt": 18
+        },
+        "brand": "Philips",
+        "brand_raw": "phil"
+      },
+      "quantity": 6,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": "'LED 18w' does not say panel, bulb or tube."
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "Batt .. - 6 wip",
+      "mark": "none",
+      "item": {
+        "category": "batten",
+        "spec": {},
+        "brand": "Wipro",
+        "brand_raw": "wip"
+      },
+      "quantity": 6,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "MCB 16 - 4 HV",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Havells",
+        "brand_raw": "HV"
+      },
+      "quantity": 4,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "DB 4w - 1 sch",
+      "mark": "none",
+      "item": {
+        "category": "distribution_box",
+        "spec": {
+          "ways": 4
+        },
+        "brand": "Schneider",
+        "brand_raw": "sch"
+      },
+      "quantity": 1,
+      "unit": null,
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "clarify",
+  "clarify_line_indexes": [
+    6,
+    7
+  ],
+  "_note": "DRAFT by Claude from hard_02.png. Check every line against the image, fix it, then save as hard_02.checked.json."
+}

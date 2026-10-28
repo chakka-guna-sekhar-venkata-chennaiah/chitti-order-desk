@@ -1,0 +1,77 @@
+sku,name,category,brand,spec_json,unit,pack_size,base_price_rupees,safety_stock,is_default_brand,opening_stock
+WIRE-1.5-RED-FINOLEX,Finolex 1.5 sq mm wire red (90 m coil),wire,Finolex,"{""size_sqmm"":1.5,""color"":""red""}",coil,1,1650,2,1,20
+WIRE-1.5-RED-POLYCAB,Polycab 1.5 sq mm wire red (90 m coil),wire,Polycab,"{""size_sqmm"":1.5,""color"":""red""}",coil,1,1600,2,0,20
+WIRE-1.5-RED-HAVELLS,Havells 1.5 sq mm wire red (90 m coil),wire,Havells,"{""size_sqmm"":1.5,""color"":""red""}",coil,1,1700,2,0,20
+WIRE-1.5-BLACK-FINOLEX,Finolex 1.5 sq mm wire black (90 m coil),wire,Finolex,"{""size_sqmm"":1.5,""color"":""black""}",coil,1,1650,2,1,20
+WIRE-1.5-BLACK-POLYCAB,Polycab 1.5 sq mm wire black (90 m coil),wire,Polycab,"{""size_sqmm"":1.5,""color"":""black""}",coil,1,1600,2,0,20
+WIRE-1.5-BLACK-HAVELLS,Havells 1.5 sq mm wire black (90 m coil),wire,Havells,"{""size_sqmm"":1.5,""color"":""black""}",coil,1,1700,2,0,20
+WIRE-1.5-GREEN-FINOLEX,Finolex 1.5 sq mm wire green (90 m coil),wire,Finolex,"{""size_sqmm"":1.5,""color"":""green""}",coil,1,1650,2,1,20
+WIRE-1.5-GREEN-POLYCAB,Polycab 1.5 sq mm wire green (90 m coil),wire,Polycab,"{""size_sqmm"":1.5,""color"":""green""}",coil,1,1600,2,0,20
+WIRE-1.5-GREEN-HAVELLS,Havells 1.5 sq mm wire green (90 m coil),wire,Havells,"{""size_sqmm"":1.5,""color"":""green""}",coil,1,1700,2,0,20
+WIRE-2.5-RED-FINOLEX,Finolex 2.5 sq mm wire red (90 m coil),wire,Finolex,"{""size_sqmm"":2.5,""color"":""red""}",coil,1,2550,2,1,20
+WIRE-2.5-RED-POLYCAB,Polycab 2.5 sq mm wire red (90 m coil),wire,Polycab,"{""size_sqmm"":2.5,""color"":""red""}",coil,1,2480,2,0,20
+WIRE-2.5-RED-HAVELLS,Havells 2.5 sq mm wire red (90 m coil),wire,Havells,"{""size_sqmm"":2.5,""color"":""red""}",coil,1,2600,2,0,20
+WIRE-2.5-BLACK-FINOLEX,Finolex 2.5 sq mm wire black (90 m coil),wire,Finolex,"{""size_sqmm"":2.5,""color"":""black""}",coil,1,2550,2,1,20
+WIRE-2.5-BLACK-POLYCAB,Polycab 2.5 sq mm wire black (90 m coil),wire,Polycab,"{""size_sqmm"":2.5,""color"":""black""}",coil,1,2480,2,0,20
+WIRE-2.5-BLACK-HAVELLS,Havells 2.5 sq mm wire black (90 m coil),wire,Havells,"{""size_sqmm"":2.5,""color"":""black""}",coil,1,2600,2,0,20
+WIRE-2.5-GREEN-FINOLEX,Finolex 2.5 sq mm wire green (90 m coil),wire,Finolex,"{""size_sqmm"":2.5,""color"":""green""}",coil,1,2550,2,1,20
+WIRE-2.5-GREEN-POLYCAB,Polycab 2.5 sq mm wire green (90 m coil),wire,Polycab,"{""size_sqmm"":2.5,""color"":""green""}",coil,1,2480,2,0,20
+WIRE-2.5-GREEN-HAVELLS,Havells 2.5 sq mm wire green (90 m coil),wire,Havells,"{""size_sqmm"":2.5,""color"":""green""}",coil,1,2600,2,0,20
+WIRE-4-RED-FINOLEX,Finolex 4 sq mm wire red (90 m coil),wire,Finolex,"{""size_sqmm"":4.0,""color"":""red""}",coil,1,3950,2,1,8
+WIRE-4-RED-POLYCAB,Polycab 4 sq mm wire red (90 m coil),wire,Polycab,"{""size_sqmm"":4.0,""color"":""red""}",coil,1,3880,2,0,8
+WIRE-4-RED-HAVELLS,Havells 4 sq mm wire red (90 m coil),wire,Havells,"{""size_sqmm"":4.0,""color"":""red""}",coil,1,4050,2,0,8
+WIRE-4-BLACK-FINOLEX,Finolex 4 sq mm wire black (90 m coil),wire,Finolex,"{""size_sqmm"":4.0,""color"":""black""}",coil,1,3950,2,1,8
+WIRE-4-BLACK-POLYCAB,Polycab 4 sq mm wire black (90 m coil),wire,Polycab,"{""size_sqmm"":4.0,""color"":""black""}",coil,1,3880,2,0,8
+WIRE-4-BLACK-HAVELLS,Havells 4 sq mm wire black (90 m coil),wire,Havells,"{""size_sqmm"":4.0,""color"":""black""}",coil,1,4050,2,0,8
+WIRE-4-GREEN-FINOLEX,Finolex 4 sq mm wire green (90 m coil),wire,Finolex,"{""size_sqmm"":4.0,""color"":""green""}",coil,1,3950,2,1,8
+WIRE-4-GREEN-POLYCAB,Polycab 4 sq mm wire green (90 m coil),wire,Polycab,"{""size_sqmm"":4.0,""color"":""green""}",coil,1,3880,2,0,8
+WIRE-4-GREEN-HAVELLS,Havells 4 sq mm wire green (90 m coil),wire,Havells,"{""size_sqmm"":4.0,""color"":""green""}",coil,1,4050,2,0,8
+SW-6A-ANCHOR,Anchor 6A switch,switch,Anchor,"{""rating_amp"":6.0}",nos,10,45,20,1,200
+SOC-6A-ANCHOR,Anchor 6A socket,socket,Anchor,"{""rating_amp"":6.0}",nos,10,70,10,1,120
+SW-6A-GM,GM 6A switch,switch,GM,"{""rating_amp"":6.0}",nos,10,55,20,0,200
+SOC-6A-GM,GM 6A socket,socket,GM,"{""rating_amp"":6.0}",nos,10,80,10,0,120
+SW-6A-HAVELLS,Havells 6A switch,switch,Havells,"{""rating_amp"":6.0}",nos,10,60,20,0,200
+SOC-6A-HAVELLS,Havells 6A socket,socket,Havells,"{""rating_amp"":6.0}",nos,10,85,10,0,120
+SW-6A-LEGRAND,Legrand 6A switch,switch,Legrand,"{""rating_amp"":6.0}",nos,10,70,20,0,200
+SOC-6A-LEGRAND,Legrand 6A socket,socket,Legrand,"{""rating_amp"":6.0}",nos,10,95,10,0,120
+SW-16A-ANCHOR,Anchor 16A switch,switch,Anchor,"{""rating_amp"":16.0}",nos,10,75,20,1,200
+SOC-16A-ANCHOR,Anchor 16A socket,socket,Anchor,"{""rating_amp"":16.0}",nos,10,100,10,1,120
+SW-16A-GM,GM 16A switch,switch,GM,"{""rating_amp"":16.0}",nos,10,90,20,0,200
+SOC-16A-GM,GM 16A socket,socket,GM,"{""rating_amp"":16.0}",nos,10,115,10,0,120
+SW-16A-HAVELLS,Havells 16A switch,switch,Havells,"{""rating_amp"":16.0}",nos,10,95,20,0,200
+SOC-16A-HAVELLS,Havells 16A socket,socket,Havells,"{""rating_amp"":16.0}",nos,10,120,10,0,120
+SW-16A-LEGRAND,Legrand 16A switch,switch,Legrand,"{""rating_amp"":16.0}",nos,10,110,20,0,200
+SOC-16A-LEGRAND,Legrand 16A socket,socket,Legrand,"{""rating_amp"":16.0}",nos,10,135,10,0,120
+MCB-16A-SCHNEIDER,Schneider MCB 16A single pole,mcb,Schneider,"{""rating_amp"":16.0}",nos,12,260,4,0,40
+MCB-16A-HAVELLS,Havells MCB 16A single pole,mcb,Havells,"{""rating_amp"":16.0}",nos,12,240,4,1,40
+MCB-16A-LT,L&T MCB 16A single pole,mcb,L&T,"{""rating_amp"":16.0}",nos,12,250,4,0,40
+MCB-32A-SCHNEIDER,Schneider MCB 32A single pole,mcb,Schneider,"{""rating_amp"":32.0}",nos,12,280,4,0,40
+MCB-32A-HAVELLS,Havells MCB 32A single pole,mcb,Havells,"{""rating_amp"":32.0}",nos,12,260,4,1,40
+MCB-32A-LT,L&T MCB 32A single pole,mcb,L&T,"{""rating_amp"":32.0}",nos,12,270,4,0,40
+BULB-9W-SYSKA,Syska 9W LED bulb,led_bulb,Syska,"{""watt"":9.0}",nos,10,95,20,1,150
+BULB-9W-HAVELLS,Havells 9W LED bulb,led_bulb,Havells,"{""watt"":9.0}",nos,10,110,20,0,150
+BULB-9W-PHILIPS,Philips 9W LED bulb,led_bulb,Philips,"{""watt"":9.0}",nos,10,120,20,0,150
+BULB-9W-WIPRO,Wipro 9W LED bulb,led_bulb,Wipro,"{""watt"":9.0}",nos,10,100,20,0,150
+PANEL-18W-PHILIPS,Philips 18W LED panel light,led_panel,Philips,"{""watt"":18.0}",nos,6,650,4,1,30
+PANEL-18W-WIPRO,Wipro 18W LED panel light,led_panel,Wipro,"{""watt"":18.0}",nos,6,600,4,0,30
+TUBE-20W-PHILIPS,Philips 20W LED tube,led_tube,Philips,"{""watt"":20.0}",nos,10,420,6,1,40
+TUBE-20W-SYSKA,Syska 20W LED tube,led_tube,Syska,"{""watt"":20.0}",nos,10,380,6,0,40
+DOWN-12W-WIPRO,Wipro 12W LED downlight,led_downlight,Wipro,"{""watt"":12.0}",nos,10,450,4,1,30
+TRACK-PHILIPS,Philips track light,track_light,Philips,{},nos,1,1800,2,1,10
+BATTEN-20W-WIPRO,Wipro 20W LED batten,batten,Wipro,"{""watt"":20.0}",nos,10,520,4,1,30
+BATTEN-20W-PHILIPS,Philips 20W LED batten,batten,Philips,"{""watt"":20.0}",nos,10,560,4,0,30
+FAN-1200-CROMPTON,Crompton ceiling fan 1200 mm,ceiling_fan,Crompton,"{""size_mm"":1200.0}",nos,1,2350,2,1,15
+FAN-1200-ORIENT,Orient ceiling fan 1200 mm,ceiling_fan,Orient,"{""size_mm"":1200.0}",nos,1,2250,2,0,15
+FAN-1200-HAVELLS,Havells ceiling fan 1200 mm,ceiling_fan,Havells,"{""size_mm"":1200.0}",nos,1,2600,2,0,15
+EXH-CROMPTON,Crompton exhaust fan,exhaust_fan,Crompton,{},nos,1,1350,2,1,10
+EXH-HAVELLS,Havells exhaust fan,exhaust_fan,Havells,{},nos,1,1450,2,0,10
+PIPE-20-SUPREME,Supreme PVC pipe 20 mm (3 m),pvc_pipe,Supreme,"{""size_mm"":20.0}",pcs,10,95,10,1,100
+BEND-20-SUPREME,Supreme PVC bend 20 mm,pvc_bend,Supreme,"{""size_mm"":20.0}",nos,50,12,20,1,300
+CLAMP-20-HAVELLS,Havells PVC clamp 20 mm,pvc_clamp,Havells,"{""size_mm"":20.0}",nos,100,4,50,1,800
+TAPE-3M,3M PVC insulation tape,pvc_tape,3M,{},nos,10,25,20,1,200
+BOX-3M-LEGRAND,Legrand modular box 3 module,modular_box,Legrand,"{""modules"":3.0}",nos,10,85,10,0,80
+BOX-3M-ANCHOR,Anchor modular box 3 module,modular_box,Anchor,"{""modules"":3.0}",nos,10,60,10,1,80
+DB-4W-SCHNEIDER,Schneider distribution box 4 way,distribution_box,Schneider,"{""ways"":4.0}",nos,1,1650,2,1,10
+DB-4W-HAVELLS,Havells distribution box 4 way,distribution_box,Havells,"{""ways"":4.0}",nos,1,1550,2,0,10
+CAT6-DLINK,D-Link Cat6 cable (305 m box),cat6_cable,D-Link,{},box,1,9500,1,1,4
+RJ45-AMP,AMP RJ45 connector,rj45_connector,AMP,{},nos,100,8,50,1,500

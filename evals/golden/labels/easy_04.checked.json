@@ -1,0 +1,201 @@
+{
+  "chit_id": "easy_04",
+  "difficulty": "easy",
+  "header": {
+    "shop_name_raw": "Office Electricals",
+    "shop_name_script": "latin",
+    "date_raw": "24/10/26",
+    "date_iso": "2026-10-24"
+  },
+  "lines": [
+    {
+      "line_index": 1,
+      "line_no_written": "1",
+      "raw_text": "Cat6 cable - 1 box (D-Link)",
+      "mark": "none",
+      "item": {
+        "category": "cat6_cable",
+        "spec": {},
+        "brand": "D-Link",
+        "brand_raw": "D-Link"
+      },
+      "quantity": 1,
+      "unit": "box",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 2,
+      "line_no_written": "2",
+      "raw_text": "RJ45 connector 100 Nos (AMP)",
+      "mark": "none",
+      "item": {
+        "category": "rj45_connector",
+        "spec": {},
+        "brand": "AMP",
+        "brand_raw": "AMP"
+      },
+      "quantity": 100,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 3,
+      "line_no_written": "3",
+      "raw_text": "20mm PVC pipe - 10 pcs (Supreme)",
+      "mark": "none",
+      "item": {
+        "category": "pvc_pipe",
+        "spec": {
+          "size_mm": 20
+        },
+        "brand": "Supreme",
+        "brand_raw": "Supreme"
+      },
+      "quantity": 10,
+      "unit": "pcs",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 4,
+      "line_no_written": "4",
+      "raw_text": "20mm bend - 20 Nos (Supreme)",
+      "mark": "none",
+      "item": {
+        "category": "pvc_bend",
+        "spec": {
+          "size_mm": 20
+        },
+        "brand": "Supreme",
+        "brand_raw": "Supreme"
+      },
+      "quantity": 20,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 5,
+      "line_no_written": "5",
+      "raw_text": "20mm clamp - 50 Nos (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "pvc_clamp",
+        "spec": {
+          "size_mm": 20
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 50,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 6,
+      "line_no_written": "6",
+      "raw_text": "LED tube 20W - 10 Nos (Philips)",
+      "mark": "none",
+      "item": {
+        "category": "led_tube",
+        "spec": {
+          "watt": 20
+        },
+        "brand": "Philips",
+        "brand_raw": "Philips"
+      },
+      "quantity": 10,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 7,
+      "line_no_written": "7",
+      "raw_text": "MCB 16A - 4 Nos (Schneider)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 16
+        },
+        "brand": "Schneider",
+        "brand_raw": "Schneider"
+      },
+      "quantity": 4,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 8,
+      "line_no_written": "8",
+      "raw_text": "MCB 32A - 2 Nos (Havells)",
+      "mark": "none",
+      "item": {
+        "category": "mcb",
+        "spec": {
+          "rating_amp": 32
+        },
+        "brand": "Havells",
+        "brand_raw": "Havells"
+      },
+      "quantity": 2,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 9,
+      "line_no_written": "9",
+      "raw_text": "6A switch - 30 Nos (Anchor)",
+      "mark": "none",
+      "item": {
+        "category": "switch",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 30,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    },
+    {
+      "line_index": 10,
+      "line_no_written": "10",
+      "raw_text": "6A socket - 20 Nos (Anchor)",
+      "mark": "none",
+      "item": {
+        "category": "socket",
+        "spec": {
+          "rating_amp": 6
+        },
+        "brand": "Anchor",
+        "brand_raw": "Anchor"
+      },
+      "quantity": 20,
+      "unit": "nos",
+      "uses_ditto": false,
+      "legibility": "clear",
+      "ambiguity": null
+    }
+  ],
+  "expected_action": "confirm_all",
+  "clarify_line_indexes": [],
+  "_note": "DRAFT by Claude from easy_04.png. Check every line against the image, fix it, then save as easy_04.checked.json."
+}

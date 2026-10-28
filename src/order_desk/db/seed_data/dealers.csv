@@ -1,0 +1,5 @@
+telegram_user_id,name,shop_name,phone,city,status,payment_terms_days
+900000001,Ramesh Babu,Ramesh Electrical Works,+91 90000 00001,Vijayawada,active,60
+900000002,Suresh Kumar,Suresh Electricals,+91 90000 00002,Vijayawada,active,30
+900000003,Sai Prasad,Sri Sai Electricals,+91 90000 00003,Guntur,active,60
+900000004,Venkat Rao,Venkat Contractors,+91 90000 00004,Vijayawada,blocked,60
