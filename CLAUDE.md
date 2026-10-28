@@ -8,7 +8,7 @@ Deep docs are in `docs/codebase/` (map below). Read only the one you need. Paths
 ## Environment and traps
 - The repo path has a space (`chitti-order-desk 2`): quote it in every shell command.
 - Git: a local repo since 2026-10-28 (branch `main`; `origin` = the public GitHub repo). Nothing is pushed yet: push only on the user's explicit OK. `_handoff/` (local working notes) and `.claude/` are gitignored.
-- Python >= 3.11 is required (`pyproject.toml`); `python3` on PATH is 3.10.0 (pyenv shim) and too old. `.venv/` was built on 2026-10-27 with `/opt/homebrew/bin/python3.13` (3.13.7; a 3.11.9 is at `~/.pyenv/versions/3.11.9/bin/python`). Call `.venv/bin/python -m ...` or activate it. Baseline: 84 passed; 86 after the KI-001 fix; 159 after the live-run fixes (125 before them; KI-055).
+- Python >= 3.11 is required (`pyproject.toml`); `python3` on PATH is 3.10.0 (pyenv shim) and too old. `.venv/` was built on 2026-10-27 with `/opt/homebrew/bin/python3.13` (3.13.7; a 3.11.9 is at `~/.pyenv/versions/3.11.9/bin/python`). Call `.venv/bin/python -m ...` or activate it. Baseline: 84 passed; 86 after the KI-001 fix; 159 after the live-run fixes, 160 after KI-075 (125 before them; KI-055).
 - Dependencies (`pyproject.toml`): `mcp>=2.3,<3`, `openai>=1.40`, `httpx`, `uvicorn`, `starlette`, `reportlab`, `matplotlib`, `pillow`; dev: `pytest>=8`. Imported but undeclared: `pydantic`, `httpx2` (KI-048; installed through `mcp` and `openai`). Installed and tested: `mcp` 2.3.0, `openai` 3.39.0, `pytest` 9.1.1, `reportlab` 5.1.0, `matplotlib` 3.11.2, `pillow` 13.0.0. Installing needs the network: ask first.
 - Secrets live in `.env` (gitignored; the repo has only `.env.example`). Never print or write token values (`NEBIUS_API_KEY`, `*_BOT_TOKEN`, `*_MCP_TOKEN`, `UPLOAD_TOKEN`). `.env` exists: the Nebius key, both bot tokens, both MCP tokens, the owner ID, `AGENT_MODEL=nvidia/nemotron-3-super-120b-a12b` and a Sarvam key (video voice-over only).
 - Runtime data is under `data/` (gitignored: SQLite DB, uploads, logs). Do not edit or delete it by hand.
@@ -18,7 +18,7 @@ Deep docs are in `docs/codebase/` (map below). Read only the one you need. Paths
 
 ## Commands (repo root; [v] verified here on 2026-10-27 or 28, [u] not run)
 - Venv [v]: `/opt/homebrew/bin/python3.13 -m venv .venv && .venv/bin/python -m pip install -q -e ".[dev]"` (23 s; the steps of `make install PY=python3.13`). It also writes the gitignored `src/chitti_order_desk.egg-info/`. `source .venv/bin/activate` puts `pytest` and `order-desk` on PATH; the other Make targets need that.
-- `.venv/bin/python -m pytest -q --tb=line` (= `make test` with the venv active) [v]: **159 passed**, about 4 s, all offline (125 before the live-run fixes, 84 before the KI-001 tests). One test: `.venv/bin/python -m pytest -q tests/test_order_flow.py::test_approve_twice_deducts_once`.
+- `.venv/bin/python -m pytest -q --tb=line` (= `make test` with the venv active) [v]: **160 passed**, about 4 s, all offline (125 before the live-run fixes, 84 before the KI-001 tests). One test: `.venv/bin/python -m pytest -q tests/test_order_flow.py::test_approve_twice_deducts_once`.
 - `PYTHONPATH=src python3 -B -m order_desk.cli --help` [v, works on 3.10]. `--env PATH` goes before the subcommand.
 - `order-desk init` [u] creates the DB and demo data. `order-desk demo` [v] runs one full order offline in `data/demo` (no keys, no network).
 - `make local` [u] = init + serve + sender + scheduler, logs in `data/logs/`; `curl http://127.0.0.1:8710/health` [u].
@@ -95,7 +95,7 @@ Human docs hold design intent and may lag the code; the code wins (see KNOWN_ISS
 | `README.md`, `FEEDBACK.md`, `docs/live-runs.md` | quick start and status; hackathon feedback with evidence; the live Telegram runs |
 
 ## Definition of done
-- The change follows the rules above. `pytest -q` passes on Python >= 3.11 (159 tests today) and new behaviour has a test that names one rule.
+- The change follows the rules above. `pytest -q` passes on Python >= 3.11 (160 tests today) and new behaviour has a test that names one rule.
 - Matcher, catalog or vocabulary change: `run_matching` is 100%. Prompt, instruction or read-back change: run the relevant paid eval if the user allows it, otherwise say it was not run.
 - Instructions changed: `order-desk export-skills`. Tool added: both scope lists, a test, and the counts (12 dealer, 22 shop, 33 distinct).
 - Schema changed: an upgrade path or a documented reset. Env var added: `config.py` and `.env.example`. `order-desk demo` still runs offline. No secrets in code, docs or logs.
@@ -105,5 +105,5 @@ Human docs hold design intent and may lag the code; the code wins (see KNOWN_ISS
 Update the doc in the same change, and bump its `Verified against code on` date only for sections you re-checked.
 - CLI, Make, scripts, config, workers, outbox, Telegram, server, deploy: `RUNTIME_AND_OPERATIONS.md`. Schema, states, invariants, service rules, seeds: `DOMAIN_AND_DATA_MODEL.md`. Tools, instructions, SQL guard, vision, models: `AGENT_MCP_AND_VISION.md`. A journey, transaction or dedupe key: `DATA_FLOW.md`. Tests, evals, conventions, recipes: `CHANGE_GUIDE.md`. Files or symbols added, moved or deleted: `CODEBASE_MAP.md`.
 - Found a bug or a drift: add a `KI-NNN` item (next free number). Fixed one: set `Status: fixed (date, change)` and correct the doc that described it.
-- Keep the `pytest` counts current in `CHANGE_GUIDE.md` section 2.1, in the Environment section and in Commands above (159 passed on 2026-10-27).
+- Keep the `pytest` counts current in `CHANGE_GUIDE.md` section 2.1, in the Environment section and in Commands above (160 passed on 2026-10-28).
 - Keep this file at 100-150 lines (hard cap 170). Use plain relative paths, never import directives: imported files load into every session.

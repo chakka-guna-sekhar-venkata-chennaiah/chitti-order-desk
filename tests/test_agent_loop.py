@@ -77,6 +77,16 @@ def test_dealer_instructions_forbid_asking_for_yes_without_a_readback():
     assert "never ask the dealer to reply YES, unless a tool result in this turn gave you a `readback`" in text
 
 
+def test_instructions_require_a_status_call_in_this_turn_before_stating_an_order_state():
+    # In the 2026-10-28 live take the dealer agent said "Your order #4 is still waiting for the shop's approval"
+    # after the owner had approved and packed it. Approvals, bills and "packed" go out through the outbox, so they
+    # never enter the agent's conversation, and an old tool result looked current (KI-075).
+    dealer = " ".join(load_instructions("dealer").split())
+    shop = " ".join(load_instructions("shop").split())
+    assert "Before you mention an order's state, call `get_order_status` in this turn." in dealer
+    assert "Before you mention an order's state, call `get_order_details` or `list_orders` in this turn." in shop
+
+
 def test_the_hermes_files_match_the_instructions(tmp_path):
     # `order-desk export-skills` output is kept in hermes/ and nothing else checked that it was run.
     from pathlib import Path

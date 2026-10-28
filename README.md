@@ -14,7 +14,7 @@ It is designed to run inside **NVIDIA NemoClaw with Hermes**; the setup script i
 |---|---|
 | Order flow in real Telegram | **Ran live** on 27 and 28 Oct: photo → read-back → dealer YES → owner approval card → packing slip and bill → PACKED; invoice stock-in; payments; owner questions; chart. See [docs/live-runs.md](docs/live-runs.md). |
 | Models on Token Factory | **Real calls**: Nemotron 3.5 Super VL (reading) and Nemotron 3 Super 120B (agent). Eval numbers below. |
-| Offline tests | **159 pass** (`pytest -q`, no network). Every test also checks the database invariants. |
+| Offline tests | **160 pass** (`pytest -q`, no network). Every test also checks the database invariants. |
 | NemoClaw + Hermes | **Designed and scripted, not run.** The macOS installer stopped at OpenShell (Command Line Tools too old). The bots run on the reference runtime `order-desk devbot`, with the same tools and the same instructions. Details: [FEEDBACK.md](FEEDBACK.md) section 5. |
 | Feedback for the hackathon | [FEEDBACK.md](FEEDBACK.md): per-tool review with measured evidence and scripts that reproduce it ([evals/proofs/](evals/proofs/)). |
 
@@ -78,7 +78,7 @@ This is our test build. It needs Python 3.11 or newer. It needs no keys, no Tele
 python3 -m venv .venv && source .venv/bin/activate     # Python 3.11+
 pip install -e ".[dev]"
 order-desk demo            # one full order + one stock-in + owner questions, offline
-pytest -q                  # 159 tests, offline
+pytest -q                  # 160 tests, offline
 python -m evals.run_matching   # matcher eval: 41 / 41
 ```
 
@@ -188,7 +188,7 @@ src/order_desk/
 hermes/            generated SOUL.md and SKILL.md for the two sandboxes
 evals/             golden/ (15 chitti images, labels, 41 matcher cases, 12 questions, 10 scenarios), run_*.py, report.py,
                    proofs/ (scripts behind the claims in FEEDBACK.md)
-tests/             159 offline tests; every test also checks the database invariants
+tests/             160 offline tests; every test also checks the database invariants
 docs/              01 architecture ... 10 decisions, live-runs.md, codebase/ (code-level guides, known issues)
 scripts/           start_local.sh, setup_nemoclaw.sh
 FEEDBACK.md        hackathon feedback: Token Factory, Nemotron, NemoClaw, Hermes

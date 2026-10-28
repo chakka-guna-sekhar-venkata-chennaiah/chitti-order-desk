@@ -466,3 +466,12 @@ These items were found by running the evals and the bots, not by reading the cod
 ### KI-074 Token Factory HTTP 529 (overloaded)
 - Found in the live run on 2026-10-28 at 09:15 IST, on a `nvidia/Nemotron-3.5-Super-VL` call. The OpenAI client's retry recovered about 34 s later.
 - Status: mitigated (2026-10-28, `max_retries` 2 -> 4 in `agent/dev_bot.py` and `vision/reader.py`). Platform feedback item.
+
+### KI-075 The dealer agent stated an old order state
+- Found in the video take on 2026-10-28 at 15:44 IST. After order #4 was approved and packed, the dealer agent said "Your order #4 is still waiting for the shop's approval".
+- Cause: approvals, bills and "packed" messages go out through the outbox, so they never enter the agent's conversation. An old tool result looked current. Rule 1 ("do not say them from memory") did not stop it.
+- Status: fixed (2026-10-28):
+  - `dealer.md` rule 10 and `shop.md` rule 8: before you mention an order's state, call the status tool in this turn.
+  - A test in `tests/test_agent_loop.py`.
+  - The paid conversation eval was not re-run.
+  - A sturdier fix would add a short note of each outbox message to the agent's conversation.

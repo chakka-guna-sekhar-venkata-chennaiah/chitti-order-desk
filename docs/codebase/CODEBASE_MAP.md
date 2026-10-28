@@ -132,7 +132,7 @@ Global CLI option: `--env <path>` (default `.env`) goes before the subcommand. D
 | `workers/outbox_sender.py` | 78 | Claim -> deliver -> mark sent / retry; unsent rows handed back on stop. | `main(settings,make_api,poll_seconds)`, `run_batch(db,senders,stop)`, `deliver`, `Sender` | cli; T:reliability |
 | `workers/scheduler.py` | 34 | `maintenance.run_once` every 60 s, first run at start. | `main(settings,every_seconds)` | cli |
 
-### 3.7 `tests/` (159 cases; all offline)
+### 3.7 `tests/` (160 cases; all offline)
 
 | File | LOC | Cases | Covers | Notes |
 |---|---|---|---|---|

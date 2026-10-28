@@ -366,7 +366,7 @@ Each recipe: **Touch** → **Verify** → **Docs**. Every recipe also ends with 
 
 ## 8. Definition of done
 - [ ] The change follows §1: layering, `clock`, paise, transactions with no network inside them, `orders.transition()`, outbox + dedupe key, `OrderDeskError`.
-- [ ] `python3 -m pytest -q` passes on Python ≥3.11 with `.[dev]` (159 tests today plus yours). New behaviour has a test that names one rule.
+- [ ] `python3 -m pytest -q` passes on Python ≥3.11 with `.[dev]` (160 tests today plus yours). New behaviour has a test that names one rule.
 - [ ] Matcher, catalog or vocabulary changed → `run_matching` is 100% and the golden set is updated. Prompt, instruction, tool-text or read-back changed → you ran the relevant paid eval and every "must be 0" metric is still 0, or you said clearly that it was not run.
 - [ ] Instructions changed → `order-desk export-skills` and the regenerated `hermes/*` files are committed. Tools added → scope test and tool counts updated.
 - [ ] Schema changed → an upgrade path exists for existing DB files (or a documented reset), plus views/`REPORT_VIEWS`. Env var added → `config.py` (both places) and `.env.example`.

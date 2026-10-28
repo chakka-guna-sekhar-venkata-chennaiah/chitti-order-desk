@@ -92,6 +92,9 @@ All numbers come from our own runs on Token Factory, 26–28 Oct 2026 (IST). Sec
 - **Weak spots and suggestions:**
   - Lightning sometimes reworded the code-built read-back (80% unchanged) and stopped before the final confirm in some chats.
   - In the live run, Super 120B sometimes added markdown (`**PACKED**`) and internal state names to chat replies; we fixed this with plain-text rules.
+  - In the video take, Super 120B told a dealer that order #4 was "still waiting for the shop's approval", minutes after it was packed (KI-075).
+    - Messages that our code sends (approval, bill, "packed") never enter the agent's conversation, so an old tool result looked current. A rule now makes it call the status tool in the same turn.
+    - *Suggestion (Hermes):* document a way for a backend or MCP server to add a short system note to the agent's session, so the agent's memory matches what the user has seen.
   - Text-to-SQL scored 6/12 with both models. The same 4 questions failed, so we believe our view descriptions are the cause.
     - The first run's 3 refusals were our own SQL guard, which blocked `LIKE`.
     - The same question can get different SQL from one run to the next: "sales value" passed in one Lightning run and failed in the next.
