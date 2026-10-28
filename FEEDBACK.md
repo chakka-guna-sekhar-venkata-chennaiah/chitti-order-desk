@@ -1,4 +1,4 @@
-# Feedback: Nebius Token Factory, NVIDIA Nemotron, NemoClaw, Hermes
+# Feedback: Nebius Token Factory and AI Cloud, NVIDIA Nemotron, NemoClaw, OpenShell and Hermes
 
 From building **Chitti Order Desk**, a Telegram order desk for electrical dealers in Vijayawada. A dealer sends a photo of a handwritten order list (a "chitti"). A Nemotron vision model reads it. A Nemotron agent talks with the dealer and the shop owner through tools. Code decides stock, credit and state.
 
@@ -9,12 +9,15 @@ All numbers come from our own runs on Token Factory, 26–28 Oct 2026 (IST). Sec
 - **Token Factory: we would use it again.** The OpenAI-compatible API needed zero custom client code: the same `openai` client runs the agent, the vision reader, text-to-SQL and four eval suites.
   - **Issue:** model IDs use several naming styles. `GET /v1/models` lists `nvidia/Nemotron-3.5-Super-VL`, `nvidia/Nemotron-3_5-Lightning`, `nvidia/nemotron-3-super-120b-a12b` and `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B`. We shipped the wrong Lightning ID once.
   - **Issue:** we saw one HTTP 529 (overloaded) on a vision call. The SDK retry recovered after 34 s.
+  - **Ask:** document how a client should handle 529: how long to wait and how many retries. Our client used its default backoff (the first retry came after 0.4 s).
 - **Nemotron 3.5 Super VL: excellent reads, but thinking can use the whole output budget.** With our production prompt and `max_tokens=4000`, one handwritten list used all 4,000 completion tokens as reasoning: `finish_reason=length`, empty answer. With 16,000 it reasoned for 5,655 tokens and returned all 10 lines. Our first eval run: 10 of 15 reads cut off (5/15 pass). After the change: all 15 complete, 11/15 pass, 0 wrong orders accepted.
   - **Ask:** a separate thinking budget (or a reasoning-effort setting), and docs that say reasoning counts inside `max_tokens`.
 - **Nemotron 3 Super 120B as the tool-calling agent:** 8/10 multi-turn chats (Lightning: 6/10); the read-back was sent unchanged 94% of the time (Lightning: 80%). It understood typed Telugu and Hindi. It is about 2x slower than Lightning.
 - **NemoClaw: we want it, but the macOS install failed.** On Apple Silicon (macOS 26.3.1), the installer stopped while installing OpenShell: "Command Line Tools are too outdated … Xcode 27.0", status 69.
   - **Ask:** a pre-flight check with the exact fix, the minimum Command Line Tools version in the docs, or a prebuilt OpenShell binary.
   - The Hermes docs gaps we hit while designing (what the agent receives for photos, sender identity for tools) are in section 5.
+- **Nebius AI Cloud: planned, not used, because of the credits.** The Best Apps and Agents track encourages Serverless Endpoints and Jobs. The rules name the Builder Program credits as Token Factory, Tavily and Nebius Academy only. A small CPU VM for the bots (2 vCPU / 8 GiB, console estimate $0.08/hour) was a separate bill; we found this out while creating it. So the bots run on a laptop, and judges get a test build, not a hosted bot.
+  - **Ask:** one clear line on the hackathon page that AI Cloud compute is billed separately, or a small compute allowance for builders. A CPU serverless container that scales to zero would fit chat bots.
 
 ## 1. Evidence at a glance
 
@@ -130,7 +133,8 @@ All numbers come from our own runs on Token Factory, 26–28 Oct 2026 (IST). Sec
 ## 6. Nebius AI Cloud (planned, not used)
 
 - **Plan:** one small CPU VM to host the bots and NemoClaw for judges (console estimate: $0.08/hour for 2 vCPU / 8 GiB).
-- **Why not used:** our credits applied to Token Factory only.
+- **Why not used:** our credits applied to Token Factory only, and the VM was a separate bill. We found this out while creating the VM. The rules name the Builder Program credits as Token Factory, Tavily and Nebius Academy, while the Apps track text encourages Serverless Endpoints and Jobs.
+- *Suggestion:* say on the hackathon page that AI Cloud compute is billed separately, or give builders a small compute allowance.
 - **Serverless:** we checked it (DevPods, Jobs, Endpoints), but found no clear CPU scale-to-zero option for a webhook bot with a small persistent disk.
 - *Suggestion:* a CPU serverless container with scale-to-zero and a small volume would fit chat bots well.
 

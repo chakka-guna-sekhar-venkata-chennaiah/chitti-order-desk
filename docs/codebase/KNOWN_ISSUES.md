@@ -323,7 +323,7 @@ How to read this file
 ### KI-056 The folder is not a git repository
 - **Evidence:** there is no `.git` directory in the repo root, and the folder name ends in " 2" (a copy).
 - **Impact:** no history and no undo, for any edit and for KI-004's delete.
-- **Found by:** reading · **Fix direction:** `git init` and commit before changing code, or work on a copy · Status: open
+- **Found by:** reading · **Fix direction:** `git init` and commit before changing code, or work on a copy · Status: fixed (2026-10-28, `git init` with a baseline commit; nothing pushed yet)
 
 ### KI-057 `make local` and `order-desk init` load demo data into the real database
 - **Evidence:** `scripts/start_local.sh:9` runs `order-desk init`; `src/order_desk/db/seed.py` `seed_demo()` fills an empty catalog with demo dealers, products and old bills; there is no empty init. The banner at `scripts/start_local.sh:24-25` shows the shell `MCP_PORT`, not the `.env` value.
@@ -420,6 +420,32 @@ Product and policy decisions
 - OQ-23 Which way should `documents` and `services` depend on each other, and should `rupees()` move down? (KI-054)
 - OQ-24 Are the default model IDs in `src/order_desk/config.py` (`vision_model`, `agent_model`) the exact Token Factory IDs (`FEEDBACK.md` #10)? Was the agent client's default `max_retries` left on purpose? Answered for the IDs on 2026-10-27 (free `GET /v1/models`): `vision_model` is listed, `agent_model` is not and the list has `nvidia/Nemotron-3_5-Lightning` (KI-059). `max_retries` is still open.
 - OQ-25 Which environment produced the 84-id `.pytest_cache`, and does the suite pass today? (KI-055) Answered 2026-10-27: the suite passes (84 passed on Python 3.13.7, 86 after KI-001); which environment wrote the old cache is still unknown.
+
+## 9. Found by the evals and the live runs (27 and 28 Oct 2026)
+
+These items were found by running the evals and the bots, not by reading the code. Checked against the code on 2026-10-28.
+
+### KI-060 The vision model's thinking used the whole output budget
+- Found in the first chitti-reader eval on 2026-10-27. The thinking counts inside `max_tokens`. With 4000, one call spent 3906 tokens thinking; the JSON was cut off or never started, and 10 of 15 chittis failed.
+- Status: fixed (2026-10-27, `VISION_MAX_TOKENS` with default 16000 in `config.py` and `vision/reader.py`, plus a cut-off warning; tests in `tests/test_vision_reader.py`). Platform feedback item (`FEEDBACK.md` section 3).
+
+### KI-061 The SQL guard refused every LIKE search
+- Found in the text-to-SQL eval on 2026-10-27. SQLite runs `x LIKE y` as a call of the function `like(y, x)`, and the authorizer refused that call, so every name search failed.
+- Status: fixed (2026-10-27, `like` added to `_SAFE_FUNCTIONS` in `services/reports.py`; a case in `tests/test_readonly_sql.py`).
+
+### KI-062 (number not used)
+
+### KI-063 The conversation eval cut off the dealer's last message
+- Found in the conversation eval on 2026-10-27. The simulated dealer sends "done" together with its final message ("Yes.", "Cancel it."). The harness stopped before the agent got that message, so the order was never confirmed or cancelled.
+- Status: fixed (2026-10-27, `evals/run_conversations.py` gives the final message to the agent; a test in `tests/test_evals.py`).
+
+### KI-064 The conversation eval gave the agent an unknown image reference
+- Found in the conversation eval on 2026-10-27. The harness sent "file:<path>", a form that the instructions and the tool text do not list. The model rewrote it, every read failed, and no order left RECEIVED.
+- Status: fixed (2026-10-27, the harness stores the photo and sends an `up:` reference; a test in `tests/test_evals.py`).
+
+### KI-065 The agent asked for YES when there was no read-back
+- Found in the conversation eval on 2026-10-27. In three runs the photo could not be read, but the agent still told the dealer "reply YES to confirm".
+- Status: fixed (2026-10-27, a rule in `agent/instructions/dealer.md`: never ask for YES unless a tool result in this turn gave a `readback`; a test in `tests/test_agent_loop.py`).
 
 ### KI-070 Shop bot treated any photo as a supplier invoice
 - Found in the live run on 2026-10-28: a dealer's chitti sent to the shop bot became a stock-in draft (nothing was applied; it needed the supplier, the invoice number and OK).

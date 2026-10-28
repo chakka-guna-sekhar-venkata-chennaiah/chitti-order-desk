@@ -6,8 +6,9 @@ A wrong label makes the score wrong, so the rules here are strict.
 ## Where the images come from
 
 The 15 images in `chits/` are synthetic. We asked electrical shops for real
-chittis, and they did not share them. We made these images with an image
-model, from patterns seen in real shops. When real chittis arrive, add them
+chittis. They did not share them, for privacy reasons, and asked to see a
+working demo first. We made these images with an image model, from patterns
+seen in real shops. When real chittis arrive, add them
 with the prefix `real_` (for example `real_01.jpg`) and label them with the
 same rules. Keep the synthetic and real results separate.
 

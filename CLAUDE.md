@@ -7,30 +7,30 @@ Deep docs are in `docs/codebase/` (map below). Read only the one you need. Paths
 
 ## Environment and traps
 - The repo path has a space (`chitti-order-desk 2`): quote it in every shell command.
-- The folder is NOT a git repo: no undo and no diff. Copy a file before a risky edit, or ask the user to `git init` first (KI-056).
+- Git: a local repo since 2026-10-28 (branch `main`; `origin` = the public GitHub repo). Nothing is pushed yet: push only on the user's explicit OK. `_handoff/` (local working notes) and `.claude/` are gitignored.
 - Python >= 3.11 is required (`pyproject.toml`); `python3` on PATH is 3.10.0 (pyenv shim) and too old. `.venv/` was built on 2026-10-27 with `/opt/homebrew/bin/python3.13` (3.13.7; a 3.11.9 is at `~/.pyenv/versions/3.11.9/bin/python`). Call `.venv/bin/python -m ...` or activate it. Baseline: 84 passed; 86 after the KI-001 fix; 159 after the live-run fixes (125 before them; KI-055).
 - Dependencies (`pyproject.toml`): `mcp>=2.3,<3`, `openai>=1.40`, `httpx`, `uvicorn`, `starlette`, `reportlab`, `matplotlib`, `pillow`; dev: `pytest>=8`. Imported but undeclared: `pydantic`, `httpx2` (KI-048; installed through `mcp` and `openai`). Installed and tested: `mcp` 2.3.0, `openai` 3.39.0, `pytest` 9.1.1, `reportlab` 5.1.0, `matplotlib` 3.11.2, `pillow` 13.0.0. Installing needs the network: ask first.
-- Secrets live in `.env` (gitignored; the repo has only `.env.example`). Never print or write token values (`NEBIUS_API_KEY`, `*_BOT_TOKEN`, `*_MCP_TOKEN`, `UPLOAD_TOKEN`). `.env` exists (made from `.env.example` on 2026-10-27): only `NEBIUS_API_KEY` is set, the Telegram, MCP and upload tokens are empty. With it, a free `GET {NEBIUS_BASE_URL}models` returns 200; `VISION_MODEL` is listed, the default `AGENT_MODEL` is not (KI-059).
+- Secrets live in `.env` (gitignored; the repo has only `.env.example`). Never print or write token values (`NEBIUS_API_KEY`, `*_BOT_TOKEN`, `*_MCP_TOKEN`, `UPLOAD_TOKEN`). `.env` exists: the Nebius key, both bot tokens, both MCP tokens, the owner ID, `AGENT_MODEL=nvidia/nemotron-3-super-120b-a12b` and a Sarvam key (video voice-over only).
 - Runtime data is under `data/` (gitignored: SQLite DB, uploads, logs). Do not edit or delete it by hand.
 - Run every process from the repo root: `.env`, `data/` and file paths stored in outbox rows are relative to the current directory.
 - `order-desk demo --workdir X` deletes X (KI-004). `order-desk init` and `make local` load demo data into an empty DB (KI-057).
 - Never run paid evals or anything that calls Telegram or the model unless the user asks.
 
-## Commands (repo root; [v] verified here on 2026-10-27, [u] not run)
+## Commands (repo root; [v] verified here on 2026-10-27 or 28, [u] not run)
 - Venv [v]: `/opt/homebrew/bin/python3.13 -m venv .venv && .venv/bin/python -m pip install -q -e ".[dev]"` (23 s; the steps of `make install PY=python3.13`). It also writes the gitignored `src/chitti_order_desk.egg-info/`. `source .venv/bin/activate` puts `pytest` and `order-desk` on PATH; the other Make targets need that.
 - `.venv/bin/python -m pytest -q --tb=line` (= `make test` with the venv active) [v]: **159 passed**, about 4 s, all offline (125 before the live-run fixes, 84 before the KI-001 tests). One test: `.venv/bin/python -m pytest -q tests/test_order_flow.py::test_approve_twice_deducts_once`.
 - `PYTHONPATH=src python3 -B -m order_desk.cli --help` [v, works on 3.10]. `--env PATH` goes before the subcommand.
-- `order-desk init` [u] creates the DB and demo data. `order-desk demo` [u] runs one full order offline in `data/demo`.
+- `order-desk init` [u] creates the DB and demo data. `order-desk demo` [v] runs one full order offline in `data/demo` (no keys, no network).
 - `make local` [u] = init + serve + sender + scheduler, logs in `data/logs/`; `curl http://127.0.0.1:8710/health` [u].
-- `order-desk serve` [u] needs `DEALER_MCP_TOKEN` and `SHOP_MCP_TOKEN`; `order-desk sender` [u] needs both bot tokens; `order-desk scheduler` [u].
-- `order-desk devbot --role dealer|shop` [u] is the reference runtime without Hermes; never on a bot token a Hermes sandbox uses.
-- `order-desk export-skills` (= `make skills`) [u] after editing `agent/instructions/*.md`.
-- `.venv/bin/python -m evals.run_matching` (= `make eval-offline`) [v]: 41 of 41 cases, accuracy 1.0, no network; writes `evals/results/matching/<stamp>/`. `evals.run_chit_reader`, `run_text2sql`, `run_conversations` are paid and have not been run: the reader has no `*.checked.json` labels (15 unverified drafts), the other two need `AGENT_MODEL`, which the provider does not list (KI-059).
+- `order-desk serve`, `sender` and `scheduler` [v, started by `scripts/start_local.sh`]: `serve` needs `DEALER_MCP_TOKEN` and `SHOP_MCP_TOKEN`; `sender` needs both bot tokens.
+- `order-desk devbot --role dealer|shop` [v, live runs on 2026-10-27 and 28] is the reference runtime without Hermes; never on a bot token a Hermes sandbox uses.
+- `order-desk export-skills` (= `make skills`) [v] after editing `agent/instructions/*.md`.
+- `.venv/bin/python -m evals.run_matching` (= `make eval-offline`) [v]: 41 of 41 cases, accuracy 1.0, no network; writes `evals/results/matching/<stamp>/`. `evals.run_chit_reader`, `run_text2sql` and `run_conversations` are paid; they ran on 2026-10-27 (README "Evals", `evals/results/SCORECARD.md`). The reader scores against the 15 `*.checked.json` labels.
 - Free models-list check [v]: `GET {NEBIUS_BASE_URL}models` with `Authorization: Bearer $NEBIUS_API_KEY` returns 200 and 30 models. Do it before any paid eval.
 - No lint, format or type-check is configured.
 
 ## Architecture in brief
-- Processes: `serve` (MCP over HTTP: `/dealer/mcp` 12 tools, `/shop/mcp` 22 tools, 33 distinct because `search_catalog` is in both; plus `/uploads` and `/health`), `sender` (outbox to Telegram), `scheduler` (expiry and reminders every 60 s). Deployed, the model runs in Hermes inside a NemoClaw sandbox; locally `agent/loop.py` runs it in process.
+- Processes: `serve` (MCP over HTTP: `/dealer/mcp` 12 tools, `/shop/mcp` 22 tools, 33 distinct because `search_catalog` is in both; plus `/uploads` and `/health`), `sender` (outbox to Telegram), `scheduler` (expiry and reminders every 60 s). The design runs the model in Hermes inside a NemoClaw sandbox (not run: the macOS install failed); today `order-desk devbot` runs it in process through `agent/loop.py`.
 - Layering rule (imports point down): `cli` and `demo` -> `agent` -> `mcp_server` and `workers` -> `services` -> `vision` and `documents` -> `db` -> `clock` and `config`. `domain/` is pure (imports only itself). `telegram/` is a leaf client. Sub-package `__init__.py` files are empty: import concrete modules.
 - In `services/`, helpers (`orders`, `stock`, `credit`, `pricing`, `matching`, `outbox.enqueue`) take an open connection and never open or commit a transaction or call the network. `DealerDesk` and `ShopDesk` are the only facades: one method per user action, each owns its transaction, they never import each other. `mcp_server/tools.py` is a thin wrapper over them.
 - Existing cross-edges, do not add more: `documents/catalog_pdf.py` -> `services/pricing.py`; `services/shop_desk.py` -> `matching._convert_quantity`.
@@ -55,14 +55,14 @@ Deep docs are in `docs/codebase/` (map below). Read only the one you need. Paths
 4. Time only through `clock.now_iso()` and `iso_in()`, never `datetime.now()`; tests freeze it with the `fixed_clock` fixture. Stock changes only through `services/stock.py` `add_movement()`; order stock leaves only in `ShopDesk.approve()` (the owner's shelf count `adjust_stock()` is the other writer, KI-003).
 5. Services raise `OrderDeskError` subclasses (`domain/errors.py`). `tools._safe()` turns them into `{"ok": false, "error", "message"}`; any other exception, including `sqlite3.IntegrityError`, becomes `internal_error`.
 6. New MCP tool: a method on `DealerDesk` or `ShopDesk`, plus a closure in `dealer_tools()` or `shop_tools()` appended to `fns` in `mcp_server/tools.py`. The caller-ID parameter must be named exactly `telegram_user_id` (dealer) or `staff_telegram_user_id` (shop), or the model can choose who it is. Shop methods call `_staff()` with the allowed roles. Docstrings and `Field(description=)` are the model-facing text. Nested values inside `changes` or `edits` are not coerced by the SDK (`line_index` must be a JSON int).
-7. Persona text lives only in `agent/instructions/{dealer,shop}.md`; then run `order-desk export-skills`. Never hand-edit `hermes/` (generated; no test checks the sync).
+7. Persona text lives only in `agent/instructions/{dealer,shop}.md`; then run `order-desk export-skills`. Never hand-edit `hermes/` (generated; `tests/test_agent_loop.py` checks the sync).
 8. `db/schema.sql` runs at every start but existing databases are not migrated (`SCHEMA_VERSION` is unused). A new column needs an upgrade path or a documented reset. Text-to-SQL may read only `REPORT_VIEWS` in `services/reports.py`; a new view also needs `_VIEW_BASE_TABLES`, a case in `tests/test_readonly_sql.py` and one in `evals/golden/text2sql.jsonl`.
 9. Vocabulary (categories, units, brands, spec keys) lives only in `domain/catalog_terms.py`. The matcher uses category, spec, brand, default brand, unit and pack size; `product_aliases` feed catalog search, not matching. A matcher or catalog change must keep `python -m evals.run_matching` at 100% (41 cases). The vision JSON shape equals the golden label shape: change `vision/prompts.py`, `domain/chitti.py` and `evals/golden/README.md` together.
 10. A new setting goes in `config.py` (`Settings` and `load_settings()`) and `.env.example`. Tests never touch the network (`FakeReader` in `tests/conftest.py`).
 
 ## Top traps (details and fixes in `docs/codebase/KNOWN_ISSUES.md`)
 - KI-001 (fixed 2026-10-27): re-confirm after `reopen_order` works; `stock.reserve()` makes the order's `released` row `active` again. `test_confirm_again_after_reopen_*` cover it.
-- KI-059: the default `AGENT_MODEL` (`nvidia/Nemotron-3.5-Lightning`) is not in the provider's model list, which has `nvidia/Nemotron-3_5-Lightning`. Devbot, `run_text2sql` and `run_conversations` wait for the user to confirm the ID.
+- KI-059: Token Factory model IDs mix styles (`nvidia/Nemotron-3_5-Lightning`, `nvidia/nemotron-3-super-120b-a12b`). Copy IDs from the free `GET /v1/models`. The `config.py` default is the listed Lightning ID; `.env` runs the agent on Super 120B.
 - KI-020: the caller ID is a tool argument. Under Hermes a wrong ID returns another dealer's order data, though `docs/09-security.md` says it cannot.
 - KI-031: the outbox gives up after about 5 minutes (6 attempts), and 400, 401, 403 fail at once. Nothing resends or alerts.
 - KI-002: a discarded supplier invoice cannot be entered again (`UNIQUE (supplier, invoice_no)`).
@@ -70,7 +70,7 @@ Deep docs are in `docs/codebase/` (map below). Read only the one you need. Paths
 - KI-043: no schema migrations; edits to `db/schema.sql` do not reach existing databases.
 - KI-035: orders expire and owners get reminders only while `order-desk scheduler` runs; `confirm()` ignores the deadline.
 - KI-021: the bot token is in request URLs and logs run at INFO, so it probably lands in `data/logs/`.
-- KI-004 and KI-056: `demo --workdir` deletes a directory, and there is no git history to restore it.
+- KI-004: `demo --workdir` deletes a directory. Git restores tracked files only, not `data/`.
 - The human docs lag the code (32 known mismatches, KNOWN_ISSUES section 7): for example "max 10 min" retries, "34 tools", `tg:` and `up:` image references.
 
 ## Docs map: changing X, read Y
@@ -92,7 +92,7 @@ Human docs hold design intent and may lag the code; the code wins (see KNOWN_ISS
 | `docs/05-mcp-tools.md`, `docs/06-reliability.md` | tool catalog; retries and idempotency |
 | `docs/07-evals.md`, `docs/08-nemoclaw-setup.md` | eval design; deployment steps |
 | `docs/09-security.md`, `docs/10-decisions.md` | threat model; why decisions were made |
-| `README.md`, `FEEDBACK.md` | quick start; real-bot feedback (Part B still empty) |
+| `README.md`, `FEEDBACK.md`, `docs/live-runs.md` | quick start and status; hackathon feedback with evidence; the live Telegram runs |
 
 ## Definition of done
 - The change follows the rules above. `pytest -q` passes on Python >= 3.11 (159 tests today) and new behaviour has a test that names one rule.

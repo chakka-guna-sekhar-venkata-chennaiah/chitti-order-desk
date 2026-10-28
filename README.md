@@ -41,7 +41,9 @@ lines are misread, and nobody knows the real stock.
 A model reads handwriting and talks. Plain code matches products and changes
 stock, money and order states. No tool lets a model approve an order.
 
-## Quick start: see it work in 2 minutes (no keys)
+## Quick start for judges: see it work in 2 minutes (no keys)
+
+This is our test build. It needs Python 3.11 or newer. It needs no keys, no Telegram account and no network after the install.
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate     # Python 3.11+
@@ -129,6 +131,16 @@ How to run, metrics and the improvement loop: [docs/07-evals.md](docs/07-evals.m
 | **Nebius Token Factory** | All model calls, through the standard OpenAI client | No GPU on the shop laptop; one key, one client |
 | **NVIDIA NemoClaw + OpenShell, Hermes** | Designed runtime: two sandboxes, keys kept outside, network policy | Not run yet (macOS install blocked; see Status) |
 
+### Where Token Factory accelerated our workflow
+
+- **One client for every model.** The standard `openai` client, pointed at Token Factory, runs the vision reader, the agent for both bots, text-to-SQL and four eval suites. We wrote no model-serving code and needed no GPU.
+- **Model choice by measurement.** The agent model is one setting (`AGENT_MODEL`). We ran the same 10-chat eval with Nemotron 3.5 Lightning and Nemotron 3 Super 120B, and kept Super: 8/10 chats against 6/10, and the read-back sent unchanged 94% of the time against 80%.
+- **Fast diagnosis.** Each response reports `finish_reason` and token usage. That showed us that the vision model's thinking used its whole `max_tokens` budget. One setting (`VISION_MAX_TOKENS`, from 4,000 to 16,000) took the reader from 5/15 to 11/15.
+- **A free model check.** `GET /v1/models` costs nothing. We used it to check the model IDs before paid runs; it showed a wrong Lightning ID in our defaults (KI-059).
+- **Speed where it matters.** Lightning plays the simulated dealer in the conversation eval. It is about 2x faster than Super (13.1 s against 26.9 s per chat).
+
+We use no other Nebius service. Nebius AI Cloud was planned for hosting but not used ([FEEDBACK.md](FEEDBACK.md) section 6).
+
 ## Repository map
 
 ```text
@@ -172,7 +184,8 @@ FEEDBACK.md        hackathon feedback: Token Factory, Nemotron, NemoClaw, Hermes
 This is a working prototype, built to show shop owners what the system does.
 
 - **Why synthetic chittis.** We asked electrical shops in Vijayawada for real
-  chittis. They did not share them. So we made 15 synthetic chittis with an
+  chittis. They did not share them, for privacy reasons, and asked to see a
+  working demo first. So we made 15 synthetic chittis with an
   image model (5 easy, 5 medium, 5 hard), based on the patterns we see in
   real shops: brand codes, ditto marks, ticks, strikes and mixed units.
 - **What the evals show today.** The numbers measure the system on these
