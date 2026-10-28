@@ -37,6 +37,35 @@ lines are misread, and nobody knows the real stock.
 | Owner | a photo of a supplier invoice, then "OK" | shows "MCB 32A: 38 -> 58 (+20)", then adds the stock |
 | Owner | "Who owes us money?" | answers from a fixed report or a guarded read-only SQL query; draws a chart on request |
 
+One order, end to end (as it ran in Telegram on 27 Oct):
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant D as Dealer
+    participant DB as Dealer bot (Nemotron 3 Super agent)
+    participant C as Code (tools + SQLite)
+    participant VL as Nemotron 3.5 Super VL (Token Factory)
+    participant SB as Shop bot (Nemotron 3 Super agent)
+    participant O as Owner / packers
+    D->>DB: photo of a chitti
+    DB->>C: read the chitti
+    C->>VL: photo + reading prompt
+    VL-->>C: lines as JSON, doubtful lines marked
+    C-->>DB: read-back: matched products, stock, "(?)"
+    DB-->>D: numbered read-back
+    D->>DB: "line 10 is the 3-module Anchor box", then YES
+    DB->>C: fix the line, confirm: stock is held
+    C-->>O: approval card: stock left, value, dues
+    O->>SB: APPROVE 12
+    SB->>C: approve: stock out, bill, packing slip
+    C-->>O: packing slip
+    C-->>D: approved, bill with cash-discount dates
+    O->>SB: PACKED 12
+    SB->>C: mark packed
+    C-->>D: packed, ready for pickup
+```
+
 **The main rule: the model reads, the code decides, the owner approves.**
 A model reads handwriting and talks. Plain code matches products and changes
 stock, money and order states. No tool lets a model approve an order.
@@ -94,11 +123,11 @@ Reply: APPROVE 1  or  REJECT 1 <reason>
 flowchart LR
     D[Dealer] <--> HD[dealer bot<br/>devbot today, Hermes in NemoClaw by design]
     O[Owner / packers] <--> HS[shop bot<br/>devbot today, Hermes in NemoClaw by design]
-    HD -- dealer token: 12 tools --> M[Order Desk tools / MCP server]
-    HS -- shop token: 22 tools --> M
+    HD -- dealer tool set: 12 tools --> M[Order Desk tools / MCP server]
+    HS -- shop tool set: 22 tools --> M
     M --> DB[(SQLite = the shop CRM)]
-    M -- chitti / invoice photo --> VL[Nemotron 3.5 Super VL]
-    HD & HS -- chat and tool calls --> AG[Nemotron 3 Super 120B]
+    M -- chitti / invoice photo --> VL[Nemotron 3.5 Super VL<br/>on Nebius Token Factory]
+    HD & HS -- chat and tool calls --> AG[Nemotron 3 Super 120B<br/>on Nebius Token Factory]
     DB --> W[Outbox sender] --> D & O
 ```
 

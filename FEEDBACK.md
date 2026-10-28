@@ -68,6 +68,8 @@ All numbers come from our own runs on Token Factory, 26–28 Oct 2026 (IST). Sec
      | our production prompt | 4,000 | **length** | 4,000 | **4,000** | **0 chars** |
      | our production prompt | 16,000 | stop | 6,932 | 5,655 | 4,023 chars, 10 lines |
 
+     ![Where the output budget went: thinking versus answer tokens, same photo](docs/images/thinking_budget.png)
+
      A developer cannot predict the budget, and when it runs out, the answer is empty rather than partial. In our first eval run, 10 of 15 reads ended this way. In our logs it first looked like a JSON problem ("the vision model did not return valid JSON"). Only `finish_reason=length` together with `reasoning_tokens` showed the real cause.
      - *Suggestion:* a separate thinking budget (or `reasoning_effort`); a model-card note that reasoning counts inside `max_tokens`; and a recommended minimum `max_tokens` for document tasks.
   2. **Hard cases (ditto marks, slashes):** 4 of 15 failed in the second run.

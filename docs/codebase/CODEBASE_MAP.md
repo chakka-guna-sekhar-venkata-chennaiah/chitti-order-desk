@@ -37,6 +37,7 @@ chitti-order-desk 2/        repo root; NOT a git repo; has a .venv (Python 3.13.
 ├── tests/                  conftest.py + 10 test_*.py; offline; no __init__.py
 ├── evals/                  common.py scenario.py run_{matching,chit_reader,text2sql,conversations}.py report.py make_review.py
 │   ├── golden/             chits/ (15 PNG), labels/ (15 draft JSON), matching|text2sql|conversations .jsonl, review.html, README.md
+│   ├── proofs/             scripts behind the FEEDBACK.md claims; plot_thinking_budget.py draws docs/images/thinking_budget.png
 │   └── results/            SCORECARD.md (tracked); per-run folders are git-ignored
 └── data/                   runtime only (git-ignored, absent in the repo): order_desk.sqlite3, uploads/, generated/, logs/, traces/, demo/
 ```
